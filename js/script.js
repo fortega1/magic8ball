@@ -32,15 +32,15 @@ function ask() {
 
     const inputField = document.getElementById("userQuestion");
     const btn = document.getElementById("askButton");
-     
-    btn.addEventListener('click', () => {
-        let randomIndex = Math.round(Math.random()*messages.length);
-        document.canvas.src = messages[randomIndex];
-        inputField.value = " ";
-    })
-}
+
+        btn.addEventListener('click', () => {
+            let randomIndex = Math.round(Math.random()*messages.length);
+            document.canvas.src = messages[randomIndex];
+            inputField.value = " ";
+        })
+    }
 
 function resetEightBall() {
-    document.canvas.src = "images/magic8ball_start.png";
+    document.canvas.src = "images/8ball2.png";
 }
 
