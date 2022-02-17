@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Magic 8 Ball App</title>
+    <title>The Magic 8 Ball App</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,14 +14,14 @@
     
     <div id="userInput">
         <label for="userQuestion">Ask me anything!</label>
-        <input type="text" id="userQuestion" placeholder="Type your question here...">
-        <button onclick="ask()" id="askButton">Ask</button>  
+        <input type="text" id="userQuestion" placeholder="Type your question here..." required>
+        <button onclick="askEightBall()" id="askButton">Ask</button><br>
     </div>
    
     <div id="answers">
         <p id="noQuestion"></p>
-        <img src="images/8ball2.png" name="canvas" id="canvas"><br>
-        <button onclick="resetEightBall()" id ="eightBall">Flip the Magic 8 Ball Back Over</button>
+        <img src="images/8ball2.png" name="canvas" id="canvas"><br><br>
+        <button onclick="flipEightBall()" id ="eightBall">Flip the Magic 8 Ball Back Over</button>
     </div>
     
     <script src="js/script.js"></script>

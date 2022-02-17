@@ -1,12 +1,6 @@
-/* 
-Create an "ask" function that when clicked, will choose
-a random 8ball image and insert it into your "answers" div.
 
-Replace the input field with the user's question when 
-displaying the answer.
-*/
-
-function ask() {
+// Triggered when user presses the Ask button
+function askEightBall() {
     const messages = [
         "images/magic8ball_1.png",
         "images/magic8ball_2.png",
@@ -30,17 +24,17 @@ function ask() {
         "images/magic8ball_20.png"
     ];
 
-    const inputField = document.getElementById("userQuestion");
-    const btn = document.getElementById("askButton");
+    let inputField = document.getElementById("userQuestion"); // Retrieves the users question
 
-        btn.addEventListener('click', () => {
-            let randomIndex = Math.round(Math.random()*messages.length);
-            document.canvas.src = messages[randomIndex];
-            inputField.value = " ";
-        })
-    }
+    let randomIndex = Math.round(Math.random()*messages.length); // Generates a random message
 
-function resetEightBall() {
+    document.canvas.src = messages[randomIndex]; // Displays a random message to the user
+
+    inputField.value = ""; // Clears the users question
+}
+ 
+// Flips the Magic 8 Ball back over 
+function flipEightBall() {
     document.canvas.src = "images/8ball2.png";
 }
 
